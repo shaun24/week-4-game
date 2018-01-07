@@ -1,0 +1,43 @@
+body {
+    /* background: url("/Users/shazamba/Desktop/week-4-game/assets/images/backgroundwallpaper.jpg");
+    background-size: 960px; */
+}
+
+
+#headerLogo {
+    background-color:rgba(0, 195, 255, 0.596);
+    color: white;
+    width: 450px;
+}
+#instructions {
+    background-color: rgba(214, 214, 7, 0.699);
+    width: 450px;
+    height:325px;
+
+}
+
+#randoNumbers {
+    background-color:rgba(12, 233, 12, 0.623);
+    width:150px;
+    height:80px;
+    /* float: left; */
+    color:blue;
+    font-size:45px;
+    padding-left: 15px;
+}
+
+#winOrLose {
+    background-color:rgba(173, 217, 230, 0.493);
+    width: 135px;
+    height: 80px;
+}
+
+#finale {
+    background-color: rgba(10, 170, 90, 0.733);
+    width: 300px;
+    height:50px;
+}
+
+#keepTrack {
+    color: black;
+}

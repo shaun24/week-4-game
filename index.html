@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet"type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="headerLogo">
+        <h1 id="headerLogo">CRYSTAL COLLECTOR!</h1>
+    </div>
+    <div class="instructions" id="instructions">
+        <p>
+            You will be given a random number at the start of the<br>
+            game.<br><br>
+            There are four crystals below. By Clicking on a crystal you<br>
+            will add a specific amount of points to your total score.<br><br>
+            You win the game by matching your total score to random<br>
+            number, you lose the game if your total score goes above<br>
+            the random number.<br><br>
+            The value of each crystal is hidden from you until you<br>
+            click on it.<br><br>
+            Each time when the game starts, the game will change the<br>
+            values of each crystal.
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div id="mainGame">
+            <div id=randoNumbers>
+                <span id="randNumGenorator"></span>
+            </div>
+            <div id="winOrLose">
+                <h3>Wins: <span id="wins"></span></h3>
+                <!-- <br> -->
+                <h3>Losses: <span id="losses"></span></h3>
+            </div>
+            <div id="imageButtons">
+                <div class="row">
+                    <button value="5"><img class="points" id="gold" src="assets/images/images-3.jpg"></button>
+                    <button value="2"><img class="points" id="chest" src="assets/images/images-2.jpg"></button>
+                    <button value="8" ><img class="points" id="key" src="assets/images/images.jpg"></button>
+                    <button value="11"><img class="points" id="bottles" src="assets/images/images-1.jpg"></button>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container2">
+    <div class="row">
+        <div id="finale">
+            <h3>Your total score is:<span id="keepTrack"></span></h3>
+        </div>
+        <!-- <div id="scoreTracker">
+            <span id="keepTrack"></span>
+        </div> -->
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/javascript/game.js"></script>
+
+<script>
+
+//Generating a random number
+    var targetNumber = Math.floor(Math.random() * 120) + 1;
+    var valueHolder = 0;
+    // $("#keepTrack").val(valueHolder)
+    var numberOptions = [2, 5, 8, 11]
+
+    var pointItems = {
+        chest: document.getElementById("chest"),
+        key: document.getElementById("key"),
+        bottles: document.getElementById("bottles"),
+        gold: document.getElementById("gold"),
+    };
+
+    // pointItems.chest.val(numberOptions[0]);
+    // pointItems.key.attr(numberOption[1]);
+    // pointItems.bottles.attr(numberOptions[2]);
+    // pointItems.gold.attr(numberOptions[3]);
+    function potato(_value) {
+        valueHolder = valueHolder + _value
+        keepTrack = document.getElementById("keepTrack");
+        alert("your score: " + valueHolder);
+        $("#keepTrack").text(valueHolder);
+    }
+
+    pointItems.chest.addEventListener('click', function(e) {
+        potato(numberOptions[0])
+    });
+    pointItems.gold.addEventListener('click', function(e){
+        potato(numberOptions[1])
+    });
+
+    pointItems.key.addEventListener('click', function(e) {
+        potato(numberOptions[2]);
+    });
+
+    pointItems.bottles.addEventListener('click', function(e) {
+        potato(numberOptions[3]);
+    });
+
+    $("#randNumGenorator").text(targetNumber);
+
+// #randNumbGenorator, #keepTrack, #wins, , #lose, if kt is > rng, alert'you win', wins ++
+
+
+
+
+
+    
+
+
+
+</script>
+</body>
+</html>
+
+
+<!-- 
+function start() {}
+
+    var counter = 0;
+    var numberOptions = [2,5,7,11];
+    var pointsValue= {}
+    gold.attr(numberOptions[0]);
+    console.log(gold)
+    for (var i =0; i<numberOptions.length; i++) {
+
+    } -->
+    <!-- // $("#chest").click(function() {
+        //     alert(attr);
+        // }); -->
+
+        <!-- // var cherst = $("#chest");
+        
+            // cherst.on('click', function(e) {
+            //     console.log(cherst[0])
+            // });
+        
+            // pointItems.chest.click(function(){
+            //     console.log("hello");
+            // })
+         -->
+
+         <!-- // chest.attr(numberOptions[0]); -->
