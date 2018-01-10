@@ -1,6 +1,7 @@
 body {
-    /* background: url("/Users/shazamba/Desktop/week-4-game/assets/images/backgroundwallpaper.jpg");
-    background-size: 960px; */
+    /* background: url("/Users/shazamba/Desktop/week-4-game/backgroundwallpaper.jpg"); */
+    background: url ("backgroundwallpaper.jpg");
+    background-size: 960px; 
 }
 
 
